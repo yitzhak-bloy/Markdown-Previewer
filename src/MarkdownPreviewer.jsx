@@ -8,7 +8,7 @@ marked.setOptions({ //Options for marked.js.
 	//renderer: renderer //Clicking link opens a new tab.
 })
 
-//This section is used for clicking a link opens a new tab.
+// This section is used for clicking a link opens a new tab.
 // const renderer = new marked.Renderer();
 // renderer.link = function (href, title, text) {
 //   return `<a target="_blank" href="${href}">${text}` + '</a>';
@@ -37,9 +37,9 @@ class MarkdownPreviewer extends Component {
         <h1>Markdown Previewer</h1>
         <textarea id="editor" onChange={this.handleChange} >
         </textarea>
-        <div id="preview" >
-            {this.state.text}
-        </div>
+        <div id="preview" dangerouslySetInnerHTML={{__html: marked(this.state.text,)}} />
+            {/* {this.state.text} */}
+        {/* </div> */}
       </div>
     )
   }
