@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import initialText from './initialtext'
 import marked from 'marked';
 
 marked.setOptions({ 
@@ -14,7 +15,7 @@ class MarkdownPreviewer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: ''
+      text: initialText
     }
   }
 
@@ -31,7 +32,7 @@ class MarkdownPreviewer extends Component {
     return (
       <div>
         <h1>Markdown Previewer</h1>
-        <textarea id="editor" onChange={this.handleChange} >
+        <textarea id="editor" value={this.state.text} onChange={this.handleChange} >
         </textarea>
         <div id="preview" dangerouslySetInnerHTML={{__html: marked(this.state.text, { renderer })}} />
       </div>
