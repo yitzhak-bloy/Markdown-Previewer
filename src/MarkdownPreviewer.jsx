@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import initialText from './initialtext'
 import marked from 'marked';
+import './MarkdownPreviewer.css';
 
 marked.setOptions({ 
 	breaks: true
@@ -15,26 +16,26 @@ class MarkdownPreviewer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: initialText
+      inputString: initialText,
     }
   }
 
   handleChange = (event) => {
-    let outputText = marked(event.target.value);
-
 		this.setState({
-      		text: outputText
+      inputString: event.target.value,
     	});
   }
 
 
   render() {
+    const {inputString } = this.state;
     return (
       <div>
         <h1>Markdown Previewer</h1>
-        <textarea id="editor" value={this.state.text} onChange={this.handleChange} >
-        </textarea>
-        <div id="preview" dangerouslySetInnerHTML={{__html: marked(this.state.text, { renderer })}} />
+        <div className='twoboxes'>
+          <textarea id="editor" value={inputString} onChange={this.handleChange} />
+          <div id="preview" dangerouslySetInnerHTML={{__html: marked(inputString, { renderer })}} />
+        </div>
       </div>
     )
   }

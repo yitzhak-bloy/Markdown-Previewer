@@ -1,0 +1,39 @@
+.twoboxes {
+    display: flex;
+    /* align-items: center; */
+    /* flex-direction: row; */
+}
+
+#editor {
+    background-color: #DFDBE5;
+    width: 45vw;
+    height: 40vw;
+    font-size: 1.5vw;
+    margin: 0 auto;
+    border: 1.5px solid #9383AA;
+    border-radius: 4px;
+    color: #5f5969; 
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+#editor:focus {
+    box-shadow:         inset 0 0 10px #9383AA;
+  }
+
+#preview {
+    background-color: #DFDBE5;
+    width: 45vw;
+    height: 40vw;
+    font-size: 1.5vw;
+    margin: 0 auto;
+    border: 1.5px solid #9383AA;
+    border-radius: 4px;
+    color: #5f5969; 
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+
+}
+  

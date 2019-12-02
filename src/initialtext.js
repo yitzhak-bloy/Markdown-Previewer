@@ -1,3 +1,37 @@
-const initialText = 'Heading\n=======\n\nSub-heading\n-----------\n \n### Another deeper heading\n \nParagraphs are separated\nby a blank line.\n\nLeave 2 spaces at the end of a line to do a  \nline break\n\nText attributes *italic*, **bold**, \n`monospace`, ~~strikethrough~~ .\n\nShopping list:\n\n  * apples\n  * oranges\n  * pears\n\nNumbered list:\n\n  1. apples\n  2. oranges\n  3. pears\n\nThe rain---not the reign---in\nSpain.\n\n *[Herman Fassett](https://freecodecamp.com/hermanfassett)*';
+const initialText = `# Welcome to my React Markdown Previewer!
+## This is a sub-heading...
+### And here's some other cool stuff:
+  
+Heres some code, \`<div></div>\`, between 2 backticks.
+\`\`\`
+// this is multi-line code:
+function anotherExample(firstLine, lastLine) {
+  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
+    return multiLineCode;
+  }
+}
+\`\`\`
+  
+You can also make text **bold**... whoa!
+Or _italic_.
+Or... wait for it... **_both!_**
+And feel free to go crazy ~~crossing stuff out~~.
+There's also [links](https://www.freecodecamp.com), and
+> Block Quotes!
+And if you want to get really crazy, even tables:
+Wild Header | Crazy Header | Another Header?
+------------ | ------------- | ------------- 
+Your content can | be here, and it | can be here....
+And here. | Okay. | I think we get it.
+- And of course there are lists.
+  - Some are bulleted.
+     - With different indentation levels.
+        - That look like this.
+1. And there are numbererd lists too.
+1. Use just 1s if you want! 
+1. But the list goes on...
+- Even if you use dashes or asterisks.
+* And last but not least, let's not forget embedded images:
+![React Logo w/ Text](https://goo.gl/Umyytc)`
 
 export default initialText;
