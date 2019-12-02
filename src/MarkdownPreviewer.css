@@ -5,12 +5,12 @@
 }
 
 #editor {
-    background-color: #DFDBE5;
+    background-color: #C1BFC6;
     width: 45vw;
     height: 40vw;
     font-size: 1.5vw;
     margin: 0 auto;
-    border: 1.5px solid #9383AA;
+    border: 1.5px solid #100720;
     border-radius: 4px;
     color: #5f5969; 
     -webkit-transition: 0.5s;
@@ -23,17 +23,17 @@
   }
 
 #preview {
-    background-color: #DFDBE5;
+    background-color: #C1BFC6;
     width: 45vw;
     height: 40vw;
     font-size: 1.5vw;
     margin: 0 auto;
-    border: 1.5px solid #9383AA;
+    border: 1.5px solid #5f5969;
     border-radius: 4px;
     color: #5f5969; 
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
-
+    overflow-y: scroll;
 }
   
